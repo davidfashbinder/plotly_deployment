@@ -78,11 +78,13 @@ function buildCharts(sample) {
     var yticks = top_otu.slice(0,10);
 
     // 8. Create the trace for the bar chart. 
-    var barData = { 
-      x: [sample_values],
-      y: [yticks],
-      type: "bar"
+    var trace = {
+      x: sample_values,
+      y: yticks,
+      type: "bar",
+      hoverinfo: otu_labels
     };
+    var barData = [trace];
       
     // 9. Create the layout for the bar chart. 
     var barLayout = {
