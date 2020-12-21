@@ -106,27 +106,32 @@ function buildMetadata(sample) {
       // Use Plotly to plot the data with the layout.
       Plotly.newPlot("bar", barData, barLayout);
 
-      var bubbleData = [
-        {
-          y: sample_values,
-          x: otu_ids,
-          text: otu_labels,
-          mode: "markers",  
-          marker: {
-            size: sample_values,
-            color: otu_ids
-          }
-        }
-      ];
 
-      var bubbleLayout = {
-        title: "Bacteria Cultures Per Sample",
-        showlegend: false,
-        height: 600,
-        width: 600
-      };
-      
-      Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+      //D2
+      // 1. Create the trace for the bubble chart.
+    var bubbleData = [
+      {
+        y: sample_values,
+        x: otu_ids,
+        text: otu_labels,
+        mode: "markers",  
+        marker: {
+          size: sample_values,
+          color: otu_ids
+        }
+      }
+   
+    ];
+
+    // 2. Create the layout for the bubble chart.
+    var bubbleLayout = {
+      title: "Bacteria Cultures Per Sample",
+      margin: {t: 30, 1: 150}
+    };
+
+    // 3. Use Plotly to plot the data with the layout
+     
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
     });
   }
 
