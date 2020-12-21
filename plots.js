@@ -134,7 +134,9 @@ function buildMetadata(sample) {
       height: 500,
       xaxis: {
         title: 'OTU ID'
-        }
+        },
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      plot_bgcolor: 'rgba(0,0,0,0)'
     };
 
     // 3. Use Plotly to plot the data with the layout
@@ -169,7 +171,9 @@ function buildMetadata(sample) {
   // 5. Create the layout for the gauge chart.
   var gaugeLayout = {
     width: 500,
-    height: 400 
+    height: 400,
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)' 
    
   };
 
