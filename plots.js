@@ -127,13 +127,13 @@ function buildMetadata(sample) {
     var bubbleLayout = {
       title: "Bacteria Cultures Per Sample",
       hovermode: "closest",
-      automargin: true,
-      autosize: true,
+      margin: {l: 50, r: 50, b: 100, t: 100},
+      autosize: false,
+      width: 500,
+      height: 500,
       xaxis: {
-        title: {
-          text: 'OTU ID'
+        title: 'OTU ID'
         }
-      }
     };
 
     // 3. Use Plotly to plot the data with the layout
