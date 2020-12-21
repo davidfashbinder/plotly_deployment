@@ -157,7 +157,7 @@ function buildMetadata(sample) {
           ]
        },
        value: frequency,
-       title: {text: "Belly Button Washing Frequency"},
+       title: {text: "Belly Button Washing Frequency <br><sub> Scrubs per Week"},
        type: "indicator",
        mode: "gauge+number"
      }
