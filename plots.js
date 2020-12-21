@@ -67,13 +67,13 @@ function buildMetadata(sample) {
       var resultArray = samples.filter(sampleObj => sampleObj.id == sample);
 
       // 1. Create a variable that filters the metadata array for the object with the desired sample number.
-      //var metadataArray = data.metadata.filter(sampleObj => sampleObj.id == sample);
+      var metadataArray = data.metadata.filter(sampleObj => sampleObj.id == sample);
 
       // Create a variable that holds the first sample in the array.
       var result = resultArray[0];
 
       // 2. Create a variable that holds the first sample in the metadata array.
-      //var metadata = metadataArray[0];
+      var metadata = metadataArray[0];
 
       // Create variables that hold the otu_ids, otu_labels, and sample_values.
       var otu_ids = result.otu_ids;
@@ -81,7 +81,7 @@ function buildMetadata(sample) {
       var sample_values = result.sample_values;
 
       // 3. Create a variable that holds the washing frequency.
-      //var frequency = parseFloat(metadata.wfreq);
+      var frequency = parseFloat(metadata.wfreq);
 
 
       // Create the yticks for the bar chart.
@@ -127,7 +127,8 @@ function buildMetadata(sample) {
     var bubbleLayout = {
       title: "Bacteria Cultures Per Sample",
       hovermode: "closest",
-      width: 3000,
+      margin: {l: 0, r: 0},
+      width: 1500,
       height: 500,
       xaxis: {
         title: 'OTU ID'
@@ -138,8 +139,21 @@ function buildMetadata(sample) {
      
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
-   // 4. Create the trace for the gauge chart.
+   
+   
+   //D3
+    // 4. Create the trace for the gauge chart.
    var gaugeData = [
+     {
+       gauge: {
+          axis: {range: [null, 10]},
+          bar: {color: "black"},
+       },
+       value: frequency,
+       title: {text: "Belly Button Washing Frequency"},
+       type: "indicator",
+       mode: "gauge+number"
+     }
      
   ];
   
@@ -149,7 +163,7 @@ function buildMetadata(sample) {
   };
 
   // 6. Use Plotly to plot the gauge data and layout.
-  
+  Plotly.newPlot("gauge", gaugeData, gaugeLayout);
 });
 }
 
