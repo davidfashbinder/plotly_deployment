@@ -111,7 +111,7 @@ function buildMetadata(sample) {
           y: sample_values,
           x: otu_ids,
           text: otu_labels,
-          type: "bubble",  
+          mode: "markers",  
           marker: {
             size: sample_values,
             color: otu_ids
@@ -121,7 +121,9 @@ function buildMetadata(sample) {
 
       var bubbleLayout = {
         title: "Bacteria Cultures Per Sample",
-        margin: {t: 30, l: 150}
+        showlegend: false,
+        height: 600,
+        width: 600
       };
       
       Plotly.newPlot("bubble", bubbleData, bubbleLayout);
