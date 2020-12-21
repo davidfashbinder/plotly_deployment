@@ -111,6 +111,7 @@ function buildMetadata(sample) {
           y: sample_values,
           x: otu_ids,
           text: otu_labels,
+          type: "bubble",  
           marker: {
             size: sample_values,
             color: otu_ids
