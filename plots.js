@@ -127,8 +127,8 @@ function buildMetadata(sample) {
     var bubbleLayout = {
       title: "Bacteria Cultures Per Sample",
       hovermode: "closest",
-      margin: {t: 30, l: 200},
-      width: 500,
+      margin: {t: 30, l: 1500},
+      width: 1500,
       labels: {otu_ids: "OTU ID"} 
     };
 
