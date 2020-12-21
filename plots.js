@@ -126,7 +126,8 @@ function buildMetadata(sample) {
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
       title: "Bacteria Cultures Per Sample",
-      margin: {t: 30, 1: 150}
+      hovermode: "closest",
+      margin: {t: 30, l: 200}
     };
 
     // 3. Use Plotly to plot the data with the layout
