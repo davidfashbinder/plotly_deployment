@@ -101,7 +101,9 @@ function buildMetadata(sample) {
       // Create the layout for the bar chart.
       var barLayout = {
         title: "Top 10 Bacteria Cultures Found",
-        margin: {t: 30, l: 150}
+        margin: {t: 30, l: 150},
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor: 'rgba(0,0,0,0)'
       };
       // Use Plotly to plot the data with the layout.
       Plotly.newPlot("bar", barData, barLayout);
