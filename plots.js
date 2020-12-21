@@ -148,6 +148,13 @@ function buildMetadata(sample) {
        gauge: {
           axis: {range: [null, 10]},
           bar: {color: "black"},
+          steps: [
+            {range: [0,2], color: "cyan"},
+            {range: [2,4], color: "dodgerblue"},
+            {range: [4,6], color: "cadetblue"},
+            {range: [6,8], color: "darkcyan"},
+            {range: [8,10], color: "aquamarine"},
+          ]
        },
        value: frequency,
        title: {text: "Belly Button Washing Frequency"},
@@ -158,7 +165,9 @@ function buildMetadata(sample) {
   ];
   
   // 5. Create the layout for the gauge chart.
-  var gaugeLayout = { 
+  var gaugeLayout = {
+    width: 500,
+    height: 400 
    
   };
 
