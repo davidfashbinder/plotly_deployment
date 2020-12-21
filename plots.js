@@ -128,7 +128,7 @@ function buildMetadata(sample) {
       title: "Bacteria Cultures Per Sample",
       hovermode: "closest",
       margin: {l: 0, r: 0},
-      width: 1500,
+      width: 1000,
       height: 500,
       xaxis: {
         title: 'OTU ID'
